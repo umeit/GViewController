@@ -19,6 +19,8 @@
 		03D9D7781856CD8E00E5838A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D9D7601856CD8E00E5838A /* UIKit.framework */; };
 		03D9D7801856CD8E00E5838A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03D9D77E1856CD8E00E5838A /* InfoPlist.strings */; };
 		03D9D7821856CD8E00E5838A /* GViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D9D7811856CD8E00E5838A /* GViewControllerTests.m */; };
+		03D9D7931856CE0500E5838A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D9D7901856CE0500E5838A /* MBProgressHUD.m */; };
+		03D9D7971856CE6D00E5838A /* UIViewController+GViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D9D7961856CE6D00E5838A /* UIViewController+GViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		03D9D77D1856CD8E00E5838A /* GViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GViewControllerTests-Info.plist"; sourceTree = "<group>"; };
 		03D9D77F1856CD8E00E5838A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03D9D7811856CD8E00E5838A /* GViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GViewControllerTests.m; sourceTree = "<group>"; };
+		03D9D78F1856CE0500E5838A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		03D9D7901856CE0500E5838A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		03D9D7951856CE6D00E5838A /* UIViewController+GViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GViewController.h"; sourceTree = "<group>"; };
+		03D9D7961856CE6D00E5838A /* UIViewController+GViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,8 @@
 		03D9D7621856CD8E00E5838A /* GViewController */ = {
 			isa = PBXGroup;
 			children = (
+				03D9D7941856CE4B00E5838A /* GViewController */,
+				03D9D78B1856CE0500E5838A /* Lib */,
 				03D9D76B1856CD8E00E5838A /* GAppDelegate.h */,
 				03D9D76C1856CD8E00E5838A /* GAppDelegate.m */,
 				03D9D76E1856CD8E00E5838A /* Images.xcassets */,
@@ -142,6 +150,32 @@
 				03D9D77E1856CD8E00E5838A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03D9D78B1856CE0500E5838A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				03D9D78C1856CE0500E5838A /* MBProgressHUD */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		03D9D78C1856CE0500E5838A /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				03D9D78F1856CE0500E5838A /* MBProgressHUD.h */,
+				03D9D7901856CE0500E5838A /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		03D9D7941856CE4B00E5838A /* GViewController */ = {
+			isa = PBXGroup;
+			children = (
+				03D9D7951856CE6D00E5838A /* UIViewController+GViewController.h */,
+				03D9D7961856CE6D00E5838A /* UIViewController+GViewController.m */,
+			);
+			path = GViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D9D76D1856CD8E00E5838A /* GAppDelegate.m in Sources */,
+				03D9D7931856CE0500E5838A /* MBProgressHUD.m in Sources */,
 				03D9D7691856CD8E00E5838A /* main.m in Sources */,
+				03D9D7971856CE6D00E5838A /* UIViewController+GViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
