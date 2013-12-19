@@ -9,6 +9,9 @@
 #import "UIViewController+GViewController.h"
 #import <objc/runtime.h>
 
+#define IS_IOS7_AND_LATER (DeviceSystemMajorVersion() >= 7)
+#define IS_IOS6_AND_EARLIER (DeviceSystemMajorVersion() <= 6)
+
 static char kHUD;
 static char kBLockList;
 static char kAlertBlockIndex;
@@ -102,6 +105,17 @@ static char kAlertBlockIndex;
 {
     [self.HUD hide:YES];
 }
+
+NSUInteger DeviceSystemMajorVersion()
+{
+    static NSUInteger _deviceSystemMajorVersion = -1;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _deviceSystemMajorVersion = [[[[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."] objectAtIndex:0] intValue];
+    });
+    return _deviceSystemMajorVersion;
+}
+
 
 #pragma mark - UIAlertViewDelegate
 

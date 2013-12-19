@@ -34,4 +34,6 @@
 
 - (void)hideLodingView;
 
+NSUInteger DeviceSystemMajorVersion();
+
 @end
