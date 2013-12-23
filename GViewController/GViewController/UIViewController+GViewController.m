@@ -106,6 +106,11 @@ static char kAlertBlockIndex;
     [self.HUD hide:YES];
 }
 
+- (void)showNetworkingErrorAlert
+{
+    [self showCustomTextAlert:@"网络异常，请检查您的网络设置或稍后再试"];
+}
+
 NSUInteger DeviceSystemMajorVersion()
 {
     static NSUInteger _deviceSystemMajorVersion = -1;

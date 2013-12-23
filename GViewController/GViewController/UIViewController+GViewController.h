@@ -34,6 +34,8 @@
 
 - (void)hideLodingView;
 
+- (void)showNetworkingErrorAlert;
+
 NSUInteger DeviceSystemMajorVersion();
 
 @end
