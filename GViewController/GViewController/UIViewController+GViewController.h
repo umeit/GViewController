@@ -17,24 +17,27 @@
 
 @property (nonatomic) NSInteger alertBlockIndex;
 
-- (void)showCustomTextAlert:(NSString *)text
-        withOKButtonPressed:(void(^)())block;
+- (void)showCustomTextAlert:(NSString *)text withOKButtonPressed:(void(^)())block;
 
-- (void)showCustomTextAlert:(NSString *)text
-                  withBlock:(void (^)())block;
+- (void)showCustomTextAlert:(NSString *)text withBlock:(void (^)())block;
 
 - (void)showCustomTextAlert:(NSString *)text;
 
-- (void)showCustomText:(NSString *)text
-                 delay:(NSInteger)delay;
+- (void)showCustomText:(NSString *)text delay:(NSInteger)delay;
 
 - (void)showLodingView;
 
+- (void)showLodingViewOn:(UIView *)view;
+
 - (void)showLodingViewWithText:(NSString *)text;
+
+- (void)showLodingViewWithText:(NSString *)text on:(UIView *)view;
 
 - (void)hideLodingView;
 
 - (void)showNetworkingErrorAlert;
+
+- (NSString *)documentPathAppendingComponent:(NSString *)component;
 
 NSUInteger DeviceSystemMajorVersion();
 

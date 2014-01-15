@@ -88,13 +88,23 @@ static char kAlertBlockIndex;
     [self showLodingViewWithText:nil];
 }
 
+- (void)showLodingViewOn:(UIView *)view
+{
+    [self showLodingViewWithText:nil on:view];
+}
+
 - (void)showLodingViewWithText:(NSString *)text
+{
+    [self showLodingViewWithText:text on:self.view];
+}
+
+- (void)showLodingViewWithText:(NSString *)text on:(UIView *)view
 {
     if (!self.HUD) {
         self.HUD = [[MBProgressHUD alloc] initWithView:self.view];
     }
     
-    [self.view addSubview:self.HUD];
+    [view addSubview:self.HUD];
     
     self.HUD.labelText = text;
     
@@ -109,6 +119,17 @@ static char kAlertBlockIndex;
 - (void)showNetworkingErrorAlert
 {
     [self showCustomTextAlert:@"网络异常，请检查您的网络设置或稍后再试"];
+}
+
+- (NSString *)documentPathAppendingComponent:(NSString *)component
+{
+    NSString *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                 NSUserDomainMask,
+                                                                 YES)[0];
+    if (component) {
+        return [documentPath stringByAppendingPathComponent:component];
+    }
+    return documentPath;
 }
 
 NSUInteger DeviceSystemMajorVersion()
