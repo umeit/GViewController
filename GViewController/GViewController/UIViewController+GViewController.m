@@ -142,6 +142,12 @@ NSUInteger DeviceSystemMajorVersion()
     return _deviceSystemMajorVersion;
 }
 
+- (UIViewController *)controllerWithName:(NSString *)name
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:name];
+    return controller;
+}
 
 #pragma mark - UIAlertViewDelegate
 

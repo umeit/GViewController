@@ -39,6 +39,8 @@
 
 - (NSString *)documentPathAppendingComponent:(NSString *)component;
 
+- (UIViewController *)controllerWithName:(NSString *)name;
+
 NSUInteger DeviceSystemMajorVersion();
 
 @end
